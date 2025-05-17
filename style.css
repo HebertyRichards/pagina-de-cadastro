@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: auto;
+  }
+  
+.main {
+    width: 50%;
+    margin: 0 auto;
+}
+
+  form label {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  table {
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table, th, td {
+    border: 1px solid #ccc;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+  
