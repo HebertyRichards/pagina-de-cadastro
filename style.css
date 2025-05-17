@@ -1,29 +1,127 @@
+html,
 body {
-    font-family: Arial, sans-serif;
-    margin: auto;
-  }
-  
-.main {
-    width: 50%;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: linear-gradient(to right, #2cc4f1, #010385);
+    text-align: center;
 }
 
-  form label {
+form {
+    background-color: #111;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #444;
+    margin: 0 auto;
+    width: 50%;
+    color: white;
+}
+
+label {
     display: block;
-    margin: 10px 0;
-  }
-  
-  table {
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  table, th, td {
-    border: 1px solid #ccc;
-  }
-  
-  th, td {
+    margin-top: 1em;
+}
+
+#nome,
+#email,
+#cpf,
+#telefone {
+    width: 95%;
     padding: 8px;
-    text-align: left;
-  }
-  
+    border: none;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    transition: 0.5s;
+    background-color: #0a28d1;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(66, 53, 243);
+}
+
+#filter-name {
+    background-color: #111;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #444;
+    margin: 0 auto;
+    border: none;
+    width: 50%;
+    color: white;
+}
+
+table {
+    margin: 0 auto;
+    margin-top: 3%;
+    box-shadow: 0 0 10px #444;
+    background-color: #111;
+    padding: 0 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+tr {
+    background-color: #222;
+}
+
+@media (max-width: 800px) {
+    form {
+        padding: 10px;
+        width: 90%;
+    }
+
+    #filter-name {
+        width: 90%;
+    }
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    th,
+    td {
+        border: 1px solid white;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+    }
+
+    td {
+        position: relative;
+        text-align: left;
+    }
+
+    td::before {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 45%;
+        white-space: nowrap;
+        font-weight: bold;
+        content: attr(data-label);
+    }
+}
